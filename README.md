@@ -1,8 +1,13 @@
 # miniray
 
 This project is my own implementation of a raytracer based on the famous book "Ray Tracing in One Weekend" by Peter Shirley, Trevor David Black, and Steve Hollasch.
+I've included multi-threading support to speed up the render process.
 
 https://raytracing.github.io/
+
+This is what you can expect from running this:
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/ff535eda-ff85-46b0-ad91-c77eb556be4e" />
+
 
 ## Prerequisites
 
