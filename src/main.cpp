@@ -42,18 +42,10 @@ int main() {
     // Camera
     camera cam;
 
-    cam.image_width       = 300;
-    cam.image_height      = 200;
+    cam.image_width       = 1920;
+    cam.image_height      = 1080;
     cam.samples_per_pixel = 20;
     cam.max_depth         = 20;
-
-    // cam.vfov     = 17;
-    // cam.lookfrom = point3d(0, 10, 0);
-    // cam.lookat   = point3d(0, 0, 0);
-    // cam.vup      = vector3d(0, 0, -1);
-
-    // cam.defocus_angle = 0.1;
-    // cam.focus_dist    = 29.0;
 
     // Scene 1, cam settings
     cam.vfov     = 20;
@@ -66,7 +58,10 @@ int main() {
 
     cam.max_threads = std::thread::hardware_concurrency();
 
-    for (int i = 0; i < 360; i++) {
+    // How many frames shold this render, if set to 360 the scene gives a full rotation.
+    const int maxFrames = 1;
+
+    for (int i = 0; i < maxFrames; i++) {
         // Render
         cam.render(world);
 
